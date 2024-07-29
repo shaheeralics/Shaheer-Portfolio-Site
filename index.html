@@ -6,114 +6,112 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
-
     <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
     <link rel="stylesheet" href="css/animate.css">
-    
     <link rel="stylesheet" href="css/owl.carousel.min.css">
     <link rel="stylesheet" href="css/owl.theme.default.min.css">
     <link rel="stylesheet" href="css/magnific-popup.css">
-
     <link rel="stylesheet" href="css/aos.css">
-
     <link rel="stylesheet" href="css/ionicons.min.css">
-    
     <link rel="stylesheet" href="css/flaticon.css">
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
 
+    <style>
+      /* Sidebar styling */
+      .sidebar {
+        height: 100%;
+        width: 250px; /* Width of the sidebar */
+        position: fixed; /* Stay in place */
+        top: 0;
+        left: 0;
+        background-color: #111; /* Background color */
+        overflow-x: hidden; /* Disable horizontal scroll */
+        padding-top: 60px; /* Padding from top */
+        z-index: 1000; /* Ensure it's on top of other elements */
+        transition: 0.3s; /* Transition effect */
+      }
 
+      .sidebar a {
+        padding: 8px 8px 8px 32px; /* Padding */
+        text-decoration: none; /* Remove underline */
+        font-size: 25px; /* Font size */
+        color: #818181; /* Text color */
+        display: block; /* Display block */
+        transition: 0.3s; /* Transition effect */
+      }
 
-<style>
+      .sidebar a:hover {
+        color: #f1f1f1; /* Text color on hover */
+      }
 
-/*======================================
-//--//-->   ABOUT
-======================================*/
+      .sidebar .closebtn {
+        position: absolute;
+        top: 20px;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+        color: #818181; /* Text color */
+      }
 
-.about-mf .box-shadow-full {
-  padding-top: 4rem;
-  padding-bottom: 4rem;
-}
+      /* Page content */
+      #main {
+        transition: margin-left .3s; /* Transition effect */
+        padding: 16px; /* Padding */
+      }
 
-.about-mf .about-img {
-  margin-bottom: 2rem;
-}
+      @media screen and (max-width: 768px) {
+        .sidebar {width: 100%;}
+        .sidebar a {font-size: 20px;}
+      }
 
-.about-mf .about-img img {
-  margin-left: 10px;
-}
-
-
-.skill-mf .progress {
-  /* background-color: #cde1f8; */
-  margin: .5rem 0 1.2rem 0;
-  border-radius: 0;
-  height: .7rem;
-}
-
-.skill-mf .progress .progress-bar {
-  height: .7rem;
-  background-color: #ffbd39;
-}
-
-
-/* Animation styles */
-#typing-animation {
-  position: relative;
-  font-size: 30px;
-  font-weight: bold;
-  color: rgb(255, 255, 255);
-  overflow: hidden;
-  white-space: nowrap;
-  animation: typing 3s steps(20, end) infinite;
-}
-
-#typing-animation:before {
-  content: "";
-  /* position: absolute; */
-  top: 0;
-  left: 0;
-  width: 0;
-  height: 100%;
-  background-color: #ccc;
-  animation: typing-cursor 0.5s ease-in-out infinite;
-}
-
-@keyframes typing {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
-}
-
-@keyframes typing-cursor {
-  from {
-    width: 5px;
-  }
-  to {
-    width: 0;
-  }
-}
-
-
-/* project image zoom effect */
-
-.zoom-effect {
-  overflow: hidden;
-  transition: transform 0.3s ease-out;
-}
-
-.zoom-effect:hover {
-  transform: scale(1.1);
-}
-
-
-</style>
-
+      .openbtn {
+        font-size: 20px;
+        cursor: pointer;
+        background-color: #111;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+      }
+    </style>
 
   </head>
+  <body>
+
+    <div id="mySidebar" class="sidebar">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <a href="#home-section">Home</a>
+      <a href="#about-section">About</a>
+      <a href="#resume-section">Resume</a>
+      <a href="#project-section">Projects</a>
+      <a href="#contact-section">Contact</a>
+    </div>
+
+    <div id="main">
+      <button class="openbtn" onclick="openNav()">☰ Open Sidebar</button>
+      <section id="home-section" class="hero">
+        <!-- Content here -->
+      </section>
+
+      <!-- Rest of your content -->
+
+    </div>
+
+    <script>
+      function openNav() {
+        document.getElementById("mySidebar").style.width = "250px";
+        document.getElementById("main").style.marginLeft = "250px";
+      }
+
+      function closeNav() {
+        document.getElementById("mySidebar").style.width = "0";
+        document.getElementById("main").style.marginLeft = "0";
+      }
+    </script>
+
+  </body>
+</html>
+
   <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
 	  
 	  
